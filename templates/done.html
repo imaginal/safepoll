@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+<section id="how-it-works">
+  <h2 class="page-header">Thank you</h2>
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <p>
+        Here's your signed ballot
+      </p>
+      <div class="highlight ticket-code"><pre><code>{{ ballot }}</code></pre></div>
+      <br>
+      <p>
+        NB: Try to find your ballot in results.
+      </p>
+      <a class="btn btn-success" href="/static/results.txt" target="_blank">Find your vote &raquo;</a>
+    </div>
+  </div>
+</section>
+
+</div> <!-- /container -->
+
+{% endblock content %}
