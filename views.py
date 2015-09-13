@@ -29,7 +29,7 @@ def auth(template_name="auth.html"):
     return render_template(template_name, ticket=text)
 
 
-@app.route('/vote/')
-def vote(template_name="vote.html", methods=['GET', 'POST']):
+@app.route('/vote/', methods=['GET', 'POST'])
+def vote(template_name="vote.html"):
     return render_template(template_name)
 
