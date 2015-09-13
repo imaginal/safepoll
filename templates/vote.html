@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+<section id="how-it-works">
+  <h2 class="page-header">Hello anonymous</h2>
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <form method="POST">
+        <div class="form-group">
+          <label for="ticket">Please put your anonymous ticket here</label>
+          <textarea id="ticket" name="ticket" class="form-control" rows="12"
+            style="font-family:Andale Mono,monospace,Courier New"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+</div> <!-- /container -->
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+<section id="how-it-works">
+  <h2 class="page-header">Here's your anonymous ticket</h2>
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <p>
+        Please save it before going to the next step.
+      </p>
+      <div class="highlight ticket-code"><pre><code>{{ ticket }}</code></pre></div>
+      <br>
+      <p>
+        NB: Each minute of waiting on this step increases your anonymity.
+      </p>
+      <a class="btn btn-success" href="/vote/">Next step &raquo;</a>
+    </div>
+  </div>
+</section>
+
+</div> <!-- /container -->
+
+{% endblock content %}
