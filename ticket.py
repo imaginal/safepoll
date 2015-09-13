@@ -45,7 +45,7 @@ class SignedTicket:
         return b64encode(self.signature)
 
     def to_text(self):
-        data = self.get_b64signature() + "$" + self.get_data()
+        data = self.get_b64signature() + "$" + self.get_data() + "$"
         text = self.get_begin()
         text += "\n".join(self.split_by(data, 42)) + "\n"
         text += self.get_end()

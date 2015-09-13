@@ -37,3 +37,6 @@ body {
 .st_share_buttons {
     height: 25px;
 }
+.ticket-code {
+  display: inline-block;
+}
