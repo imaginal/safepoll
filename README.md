@@ -10,7 +10,7 @@ Ticket
     sign
 
 
-IDCard
+UsedID
     code
     poll
 

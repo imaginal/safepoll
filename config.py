@@ -1,19 +1,14 @@
 # -*- coding: utf-8 -*-
 
 ADMINS = ['flyonts@gmail.com']
-BRANDING = 'E-Voting'
-DEBUG = False
+BRANDING = 'safepoll.me'
+DEBUG = True
 DATABASE = {
     'name': 'peewee.db',
     'engine': 'peewee.SqliteDatabase',
     'check_same_thread': False
 }
-UPLOAD_DIR = '../var/uploads'
-BALLOT_DIR = '../var/ballots'
-SECRET_KEY = 'changeme-secret'
-# OpenSSL
-UADSTU_OPENSSL = '/usr/bin/openssl'
-UADSTU_CER_DIR = '../var/certificates'
+SECRET_KEY = 'M2gcpjcHibNCkuegqDQr'
 
 # Gunicorn
 bind = '127.0.0.1:4000'
