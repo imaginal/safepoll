@@ -1,4 +1,173 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<div class="jumbotron jumbotron-carousel hidden-print">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 text-center">
+        <h1>Poll Me Safe</h1>
+        <p>Open, Secure, High-Privacy voting system
+          <br>
+          The only poll that you can <span class="strikethrough">believe</span> trust</p>
+        <div class="actions">
+          <a class="btn btn-default btn-lg" href="#modal-entrance" data-toggle="modal">
+            <i class="fa fa-plus fa-super"></i><br>
+            New poll
+          </a>
+          <a class="btn btn-default btn-lg" href="#modal-entrance-vote" data-toggle="modal">
+            <i class="fa fa-check-square-o fa-super"></i><br>
+            Go voting
+          </a>
+        </div>
+        <div class="shameless-self-promotion">
+          We're open! Checkout the
+          <a href="https://github.com/imaginal">source code</a> &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+          <a href="/privacy-policy/">Our Privacy Policy</a> &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+          Created by <a href="http://fb.com/flyonts">Volodymyr Flonts</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="social-buttons" class="hidden-print">
+  <div class="container">
+    <form id="newsletter" method="post" action="https://formkeep.com/f/d8c63a79aead">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-2 col-sm-6">
+          <div class="form-group margin-bottom">
+            <input name="email" type="email" class="form-control" id="email" placeholder="Enter your email address&hellip;" required>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <button type="submit" class="btn btn-success btn-block margin-bottom-lg"
+              data-toggle="popover" data-trigger="hover" data-placement="top" title="Stay up to date with the Safe Poll Me"
+              data-content="We'll send you updates about new features. We won't spam you. Scout's honor.">
+            Subscribe for the future best polls only&nbsp;&nbsp;<i class="fa fa-envelope"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="st_share_buttons">
+    <span class='st_facebook_hcount' displayText='Facebook'></span>
+    <span class='st_twitter_hcount' displayText='Tweet'></span>
+    <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+    <span class='st_email_hcount' displayText='Email'></span>
+  </div>
+</div>
+
+<div class="container">
+
+<section class="hidden-print">
+  <a id="why-its-safe" name="why-its-safe"></a>
+  <a id="get-started" name="get-started"></a>
+
+  <div class="stripe-ad">
+
+
+  <p class="lead">
+    Safe Poll.Me  gives you open and secure poll system for your friends &amp; customers.
+    You'll be sure in the results and your customers will be honest, because they feeling safe and secure.
+  </p>
+
+  </div>
+</section>
+
+
+<section id="why" class="feature-list">
+  <div class="row">
+    <div class="col-md-4 col-sm-6">
+      <h4><i class="fa fa-flag"></i> We're open</h4>
+      Open Source guarantees that the system is fair and no extra data is stored.
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <h4><i class="fa fa-sign-in"></i> Using Digital ID</h4>
+      It means no fake accounts. Only those who you need.
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <h4><i class="fa fa-lock"></i> Privacy first</h4>
+      We use two isolated servers to provide the highest level of protection for your personal data.
+    </div>
+  </div>
+</section>
+
+<section id="thanks-to">
+  <h2 class="page-header">How it works</h2>
+  <div class="row">
+    <div class="col-md-4 col-sm-4">
+      <p>
+        1. You authenticate on the first server using DigID and get an anonymous ticket for vote on second server.
+      </p>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <p>
+        2. You vote on second server using an anonymous ticket. As result you'll get a signed confirmation of your vote.
+      </p>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <p>
+        3. We publish every vote and you can be sure that nothing has been lost.
+        But if it does, you can confirm your vote using signed confirmation.
+      </p>
+    </div>
+  </div>
+</section>
+
+</div> <!-- /container -->
+
+<div class="modal fade" id="modal-entrance" tabindex="-1" role="dialog" aria-labelledby="modal-entrance-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+        <h2 class="modal-title" id="modal-entrance-label">Connect your ID-card</h2>
+      </div>
+      <div class="modal-body text-lg">
+        <p class="margin-bottom-lg">
+          Connect ID card reader to your computer and make sure it is installed and running on your computer (most card readers have an indicator light for confirmation) and put your card in the reader.
+        </p>
+
+        <p class="margin-bottom-lg">
+          Click authenticate and enter their ID card PIN1 code (four digits).
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-success btn-lg block-xs" href="https://www.safepoll.me/admin/">
+          Authenticate &nbsp;<i class="fa fa-external-link fa-lg"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-entrance-vote" tabindex="-1" role="dialog" aria-labelledby="modal-entrance-vote-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+        <h2 class="modal-title" id="modal-entrance-vote-label">Connect your ID-card</h2>
+      </div>
+      <div class="modal-body text-lg">
+        <p class="margin-bottom-lg">
+          Connect ID card reader to your computer and make sure it is installed and running on your computer (most card readers have an indicator light for confirmation) and put your card in the reader.
+        </p>
+
+        <p class="margin-bottom-lg">
+          Click authenticate and enter their ID card PIN1 code (four digits).
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-success btn-lg block-xs" href="https://www.safepoll.me/vote/">
+          Authenticate &nbsp;<i class="fa fa-external-link fa-lg"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock content %}
