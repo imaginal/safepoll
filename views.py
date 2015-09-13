@@ -30,5 +30,6 @@ def auth(template_name="auth.html"):
 
 
 @app.route('/vote/')
-def vote(template_name="vote.html"):
+def vote(template_name="vote.html", methods=['GET', 'POST']):
     return render_template(template_name)
+
