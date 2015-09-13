@@ -58,9 +58,9 @@ class SignedTicket:
         pos = text.find(self.get_end())
         text = text[:pos].replace("\n", "").replace("\r", "")
         args = text.split("$")
-        self.data = args[0]
-        self.salt = args[1]
-        self.signature = b64decode(args[2])
+        self.signature = b64decode(args[0])
+        self.data = args[1]
+        self.salt = args[2]
 
 
 class VotingTicket(SignedTicket):

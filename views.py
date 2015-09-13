@@ -31,5 +31,31 @@ def auth(template_name="auth.html"):
 
 @app.route('/vote/', methods=['GET', 'POST'])
 def vote(template_name="vote.html"):
+    if request.form:
+        text = request.form['ticket']
+        ticket = VotingTicket()
+        ticket.open_key('../keys/key1.pem')
+        ticket.from_text(text)
+        if ticket.signature and ticket.data:
+            return redirect('pick')
+    return render_template(template_name)
+
+
+@app.route('/pick/')
+def pick(template_name="pick.html"):
+    if request.args:
+        pick_id = request.args['id']
+        ballot = VotingBallot()
+        ballot.open_key('../keys/key2.pem')
+        ballot.new_salt()
+        ballot.set_data(pick_id)
+        ballot.sign()
+        with open('static/results.txt', 'a') as f:
+            s = ballot.get_b64signature()[0:80]
+            r = "%s %s\n" % (pick_id, s)
+            f.write(r)
+        text = ballot.to_text()
+        return render_template("done.html", ballot=text)
+
     return render_template(template_name)
 
